@@ -34,8 +34,6 @@ export default function Register() {
     } catch (err) {
       alert('Deu ruim');
     }
-
-
   }
 
   return (
