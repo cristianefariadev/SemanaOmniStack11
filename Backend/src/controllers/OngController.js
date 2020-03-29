@@ -1,13 +1,10 @@
-const connection = require('../database/connection');
 const crypto = require('crypto');
+const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    routes.get('/ongs', async (request, response) => {
-      const ongs = await connection('ongs').select('*');
-
-      return response.json(ongs);
-    });
+    const ongs = await connection('ongs').select('*');
+    return response.json(ongs);
   },
 
   async create(request, response) {
